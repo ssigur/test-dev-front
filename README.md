@@ -16,7 +16,6 @@ Avec les sources reçues par mail, faites l'intégration de la page d'accueil, a
 ## Contraintes :
 - Faites un Fork du dépot Git pour utiliser l'environement de dev proposé.
 - Utilisez Git pour versionner vos développements.
-- Deadline Mardi 10h.
 - Pensez à joindre dans votre mail l'url de votre dépot, avec une petite note sur votre travail.
 
 

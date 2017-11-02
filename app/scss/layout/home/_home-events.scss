@@ -1,0 +1,10 @@
+#events{
+
+  h2{
+    &::before{
+      background-image: url(../img/calendar.svg);
+      background-size: 75%;
+    }
+  }
+
+}

@@ -1,0 +1,9 @@
+#tips{
+
+  h2{
+    &::before{
+      background-image: url(../img/ampoule.svg);
+    }
+  }
+
+}

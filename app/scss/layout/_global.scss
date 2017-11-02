@@ -1,4 +1,10 @@
 body{
-  background: #ddd;
   font-family: $f-stack-sans;
+}
+
+// Desktop
+@include bp(min-width, $bp-large) {
+  main{
+    margin-top: 104px;
+  }
 }

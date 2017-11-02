@@ -1,7 +1,14 @@
 @import "vendor/normalize/_import-now";
+@import "core/_reset";
+@import "_webfonts";
+@import "_var";
 
+// Mixins
+@import "vendor/bourbon/_bourbon";
+@import 'mixin/_breakpoint';
+@import 'mixin/_clearfix';
+@import 'mixin/_utils';
 
-
-body{
-  border: 10px solid deeppink;
-}
+// Layout
+@import "layout/_global.scss";
+@import "layout/_header.scss";

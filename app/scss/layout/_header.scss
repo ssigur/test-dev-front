@@ -1,0 +1,178 @@
+header{
+  background: white;
+  height: 86px;
+  width: 100%;
+
+  .innertube{
+    max-width: $max-content-width;
+    padding: 40px 0;
+    position: relative;
+
+    @extend %innertube;
+  }
+
+  li{
+    display: inline-block;
+
+  }
+
+  // Desktop
+  @include bp(min-width, $bp-large) {
+    height: 104px;
+    position: fixed;
+
+    .innertube{
+      max-width: $max-content-width;
+      padding: 55px 0 0;
+    }
+  }
+
+
+  /* ============================================ *
+   * Menu principal
+   * ============================================ */
+  .primary{
+    float: right;
+
+    li:nth-child(n + 2){
+      @extend %hidden-D;
+    }
+
+
+    .home{
+      left: 0;
+      position: absolute;
+      top:10px;
+      left: 3%;
+      width: 70px;
+    }
+
+    // Mobile
+    @include bp(min-width, $bp-xsmall) {
+      .home{
+        left: 5%;
+        top:20px;
+        width: 80px;
+      }
+    }
+
+    // Desktop
+    @include bp(min-width, $bp-large) {
+      font-size: em($f-size-l, 16);
+
+      li{
+        float: left;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin: 0 30px 0 0;
+
+        &:nth-child(n + 2){
+          display: block;
+        }
+      }
+
+      a{
+        color: $c-black;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .home{
+        width: auto;
+      }
+
+    }
+  }
+
+  /* NAV MOBILE MENU Principal  --------------------------  */
+  #nav-menu-mobile{
+    padding: 10px;
+    position: absolute;
+    left: calc(6% + 70px);
+    top: 28px;
+    font-weight: bold;
+
+    img{
+      float: left;
+    }
+
+    span{
+      text-transform: uppercase;
+      margin-left: 10px;
+
+      @extend %hidden-D;
+    }
+
+    @include bp(min-width, $bp-xsmall) {
+      left: calc(8% + 80px);
+
+      span{
+        display: inline-block;
+      }
+    }
+
+    @include bp(min-width, $bp-large) {
+      display: none;
+    }
+
+  }
+
+
+
+  /* ============================================ *
+   * Menu secondaire
+   * ============================================ */
+  .secondary{
+    float: right;
+    margin: -15px 5px 0;
+
+    a{
+
+      background: url(../img/calendar.svg) no-repeat 50% 50%;
+      background-size: 75%;
+      display: inline-block;
+      height: 38px;
+      margin: 0 4px;
+      width: 28px;
+
+
+      &.calendar { background-image: url(../img/calendar.svg);  }
+      &.map      { background-image: url(../img/carte_interactive.svg); background-size: 100%; }
+      &.basket   { background-image: url(../img/panier.svg); }
+      &.search   { background-image: url(../img/loupe.svg); }
+
+      >span{
+        @extend %hidden-L;
+      }
+    }
+
+
+    @include bp(min-width, $bp-xsmall) {
+      a{
+        margin: 0 8px;
+        width: 35px;
+      }
+    }
+
+    // Desktop
+    @include bp(min-width, $bp-xlarge) {
+      margin: -15px 5% 0 5%;
+
+      a{
+        margin:0  15px;
+      }
+
+      // Search
+      li:last-child{
+        border-right: 1px solid $c-grey;
+        border-left: 1px solid $c-grey;
+        margin-left: 40px;
+
+        .search{
+          background-size: 50%;
+        }
+      }
+    }
+
+  }
+}

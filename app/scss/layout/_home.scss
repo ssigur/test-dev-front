@@ -9,24 +9,28 @@ body.home{
       @extend %hidden-L
     }
 
-    h2{
-      display: block;
-      font-size: em($f-size-xxl, 14);
-      font-weight: bold;
-      letter-spacing: 4px;
-      padding: 10px 0;
+    > section{
       text-align: center;
-      text-transform: uppercase;
 
-      &::before{
-        content: '';
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: 100%;
+      > h2{
         display: block;
-        height: 40px;
-        margin: 15px auto;
-        width: 40px;
+        font-size: em($f-size-xxl, 14);
+        font-weight: bold;
+        letter-spacing: 4px;
+        padding: 10px 0;
+        text-align: center;
+        text-transform: uppercase;
+
+        &::before{
+          content: '';
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: 100%;
+          display: block;
+          height: 40px;
+          margin: 15px auto;
+          width: 40px;
+        }
       }
     }
 

@@ -5,9 +5,11 @@
 
 // Mixins
 @import "vendor/bourbon/_bourbon";
+@import "vendor/_animate";
 @import 'mixin/_breakpoint';
 @import 'mixin/_clearfix';
 @import 'mixin/_utils';
+@import 'mixin/_buttons';
 
 // Layout
 @import "layout/_global.scss";

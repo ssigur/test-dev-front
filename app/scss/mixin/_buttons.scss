@@ -1,0 +1,45 @@
+%btn-undress{
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+%btn-poi {
+  background: url(../img/marqueur.svg) no-repeat 50% 50%;
+  display: block;
+  height: 80px;
+  width: 55px;
+}
+
+%btn-poi-details {
+  background: $c-green;
+  border-radius: 15px;
+  color: $c-white;
+  display: inline-block;
+  font-size: em($f-size-xxs, 16);
+  font-weight: 500;
+  padding: 8px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &::after{
+    content: '+';
+    margin-left: 5px;
+  }
+}
+
+%btn-poi-close {
+  background: $c-black;
+  border-radius: 18px;
+  display: block;
+  font-size: em(24);
+  height: 35px;
+  width: 35px;
+  @include transform(rotate(45deg));
+
+  &::before{
+    content: '+';
+    color: $c-white;
+  }
+}
